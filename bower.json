@@ -1,0 +1,29 @@
+{
+  "name": "zanen",
+  "version": "0.0.1",
+  "authors": [
+    "kamhix <kimly02@gmail.com>"
+  ],
+  "description": "See your wallpaper differently with zanen. A tool to apply filters on images",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "filter",
+    "wallpaper",
+    "background",
+    "editor"
+  ],
+  "license": "MIT",
+  "homepage": "http://zanen.kamhix.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "caman": "~4.1.2",
+    "bootstrap": "~3.3.6"
+  }
+}

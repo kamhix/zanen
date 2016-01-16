@@ -1,0 +1,28 @@
+{
+  "name": "Zanen",
+  "version": "0.0.1",
+  "description": "See your wallpaper differently with zanen",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "keywords": [
+    "wallpaper",
+    "filter",
+    "desktop"
+  ],
+  "single-instance": true,
+  "window": {
+    "title": "Zanen",
+    "toolbar": false,
+    "position": "center",
+    "width": 800,
+    "height": 600,
+    "min_width": 700,
+    "min_height": 560,
+    "icon": "assets/logo.png"
+  },
+  "author": "kamhix <kimly02@gmail.com",
+  "license": "MIT"
+}

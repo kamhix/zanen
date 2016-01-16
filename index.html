@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Zanen</title>
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="styles/main.css">
+
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="bower_components/caman/dist/caman.full.min.js"></script>
+  </head>
+  <body>
+    <div class="loader hide" data-wallpaper-loader>
+      <div>Loading, Please wait a moment...</div>
+    </div>
+    <div class="container-fluid full-height">
+      <div class="row full-height" data-view-one>
+        <div class="col-xs-8 col-xs-offset-2 text-center full-height">
+          <div class="vertical-content full-height-padded-bottom">
+            <a href="#" class="btn btn-primary btn-lg" data-image-picker>Select your image</a>
+            <input type="file" class="hide" data-file-picker>
+            <div class="marged-top">Or</div>
+            <hr>
+            <div class="marged-bottom">Use your current wallpaper</div>
+            <div class="row semi-full-height">
+              <div class="col-xs-10 col-xs-offset-1 full-height">
+                <img class="img-responsive selectable" data-current-wallpaper>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row full-height-padded-bottom hide" data-view-two>
+        <div class="navbar navbar-default navbar-fixed-top">
+          <div class="container-fluid">
+            <div class="row padded-top-sm">
+              <div class="col-xs-1">
+                <button class="btn btn-default" data-back-view-one>Back</button>
+              </div>
+              <div class="col-xs-2 marged-top-sm text-right">
+                <label for="filters-list">Set a filter</label>
+              </div>
+              <div class="col-xs-3">
+                <select id="filters-list" class="form-control" data-filters-list></select>
+              </div>
+              <div class="col-xs-4 col-xs-offset-2 text-right">
+                <button class="btn btn-primary hide" data-save-wallpaper>Save Your Wallpaper</button>
+                <div class="btn-group">
+                  <button class="btn btn-primary" data-set-wallpaper>Set As Wallpaper</button>
+                  <button type="button" class="btn btn-primary dropdown-toggle" data-options-dropdown-caret
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <input type="file" class="hide" nwsaveas="zanen-wallpaper.png" data-file-saver>
+                  <ul data-wallpaper-options class="dropdown-menu">
+                    <li><a href="#" data-options="saveAs">Save As...</a></li>
+                    <li role="separator" class="divider for-linux"></li>
+                    <li class="for-linux"><a href="#" data-options="centered">Centered</a></li>
+                    <li class="for-linux"><a href="#" data-options="scaled">Scaled</a></li>
+                    <li class="for-linux"><a href="#" data-options="stretched">Stretched</a></li>
+                    <li class="for-linux"><a href="#" data-options="zoom">Zoom</a></li>
+                    <li class="for-linux"><a href="#" data-options="spanned">Spanned</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 full-height">
+          <div class="row full-height">
+            <div class="col-md-10 col-md-offset-1 full-height-padded">
+              <img class="img-responsive" id="wallpaper">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row footer">
+        <div class="col-md-12">
+          <p class="text-center">Made with <strong>♥</strong> by
+            <a href="https://twitter.com/kamhix" target="_blank">@kamhix</a>, co-Founder of
+            <a href="https://getpikiz.com" target="_blank">Getpikiz</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="scripts/utils.js"></script>
+    <script type="text/javascript" src="scripts/system.js"></script>
+    <script type="text/javascript" src="scripts/filters.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
+  </body>
+</html>
