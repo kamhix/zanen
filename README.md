@@ -1,4 +1,4 @@
-# Todoist Linux
+# Zanen
 
 ## What is it ?
 
