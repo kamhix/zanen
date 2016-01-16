@@ -20,13 +20,6 @@ Zanen is available for osx and linux download on http://zanen.kamhix.com.
 * OSX
   - Sometime the 'Set As Wallpaper' don't work
 
-
-## Screenshots
-
-![Choose your image](https://raw.githubusercontent.com/kamhix/zanen/master/assets/zanen-1.jpeg)
-![Select a filter](https://raw.githubusercontent.com/kamhix/zanen/master/assets/zanen-2.jpeg)
-![Set as wallpaper](https://raw.githubusercontent.com/kamhix/zanen/master/assets/zanen-3.jpeg)
-
 ## Run it yourself
 
 if you want to run it by yourself, please follow the following instructions.
