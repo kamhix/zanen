@@ -59,7 +59,7 @@ $(window).on('load', function () {
   });
 
   $wallpaperSet.on('click', function () {
-    var output = window.getUserHome() + '/.';
+    var output = window.getUserHome();
     $wallpaperLoader.removeClass('hide');
     window.saveWallpaper(output, function (outputUrl) {
       $wallpaperLoader.addClass('hide');
@@ -72,12 +72,7 @@ $(window).on('load', function () {
     return false;
   });
 
-  if (window.osType === 'Windows_NT') {
-    $('[data-save-wallpaper]').removeClass('hide');
-    $('[data-set-wallpaper]').addClass('hide');
-    $('[data-options-dropdown-caret]').addClass('hide');
-    $('[data-wallpaper-options]').addClass('hide');
-  } else if (window.osType === 'Darwin') {
+  if (window.osType === 'Windows_NT' || window.osType === 'Darwin') {
     $('[data-wallpaper-options] li.for-linux').addClass('hide');
   }
 

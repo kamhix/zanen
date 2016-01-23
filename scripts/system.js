@@ -17,11 +17,23 @@ window.getCurrentWallpaper = function () {
       'posix path of (get desktop picture as alias)\'', { encoding: 'utf8' });
 
     return currentWallpaper;
+  } else if (osType === 'Windows_NT') {
+
+    var currentWallpaper = childProcess.execSync('reg query "HKCU\\Control Panel\\Desktop" /v Wallpaper',
+      { encoding: 'utf8' });
+
+    currentWallpaper = currentWallpaper.split(' ')[currentWallpaper.split(' ').length - 1];
+
+    return currentWallpaper;
   }
 };
 
 window.getUserHome = function () {
-  return process.env[(process.platform == 'win32') ? 'USERPROFILE' : 'HOME'];
+  if (process.platform == 'win32') {
+    return process.env['USERPROFILE'] + '\\Documents\\';
+  } else {
+    return process.env['HOME'] + '/.';
+  }
 };
 
 window.setCurrentWallpaper = function (url) {
@@ -37,6 +49,13 @@ window.setCurrentWallpaper = function (url) {
 
     childProcess.execSync('osascript -e \'tell application "Finder" to set desktop picture to POSIX file "' +
       url + '"\'', { encoding: 'utf8' });
+  } else if (osType === 'Windows_NT') {
+
+    childProcess.execSync('reg add "HKCU\\Control Panel\\Desktop" /v Wallpaper /t REG_SZ /d ' + url + ' /f',
+      { encoding: 'utf8' });
+
+    childProcess.execSync('RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters',
+      { encoding: 'utf8' });
   }
 };
 
