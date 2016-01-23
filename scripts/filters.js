@@ -2,9 +2,11 @@ var filters = [
   ['clear', 'Clear'],
   ['greyscale', 'Greyscale'],
   ['sepia', 'Sepia'],
-  // ['gaussianBlur', 'Gaussian Blur'],
+  ['grungy', 'Grungy'],
+  ['glowingSun', 'Glowing Sun'],
   ['herMajesty', 'Her Majesty'],
   ['vintage', 'Vintage'],
+  ['crossProcess', 'Cross Process'],
   ['sinCity', 'SinCity'],
   ['love', 'Love'],
   ['lomo', 'Lomo'],
@@ -14,7 +16,7 @@ var filters = [
   ['jarques', 'Jarques'],
   ['hazyDays', 'Hazy Days'],
   ['nostalgia', 'Nostalgia']];
-
+  
 var fs = require('fs');
 
 var currentFilter = 'clear';
